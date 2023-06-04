@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame
 from settings import *
 
 from editor import Editor
@@ -14,10 +14,6 @@ class Main:
     def run(self):
         while True:
             dt = self.clock.tick() / 1000
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    sys.exit
 
             self.editor.run(dt)
             pygame.display.update()
